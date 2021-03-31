@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaymentForm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.min.js>
+    <Link rel="stylesheet" href="stylesheets/payment.css">
+</head>
+<body>
+    <form data-coffee-order="payment-form">
+        <h1>Payment Form</h1>
+        <p>
+            Required fields are followed by <strong><abbr title="required">*</abbr></strong>
+        </p>
+        <section>
+            <h2>Contact Information</h2>
+            <p>
+                <fieldset>
+                    <legend>Title</legend>
+                    <ul id="radios">
+                        <li>
+                            <label for="title_1">
+                                <input type="radio" id="title_1" name="title" value="Mr">
+                                Mr.
+                            </label>
+                        </li>
+                        <li>
+                            <label for="title_2">
+                                <input type="radio" id="title_2" name="title" value="Ms">
+                                Ms.
+                            </label>
+                        </li>
+                        <li>
+                            <label for="title_3">
+                                <input type="radio" id="title_3" name="title" value="Mrs">
+                                Mrs.
+                            </label>
+                        </li>
+                        <li>
+                            <label for="title_4">
+                                <input type="radio" id="title_4" name="title" value="Captain" checked>
+                                Captain
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </p>
+            <p>
+                <label for="name">
+                    <span>Name:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="pwd" name="password" autocomplete="off">
+            </p>
+            <h2>Payment Information</h2>
+            <p>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mc">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Card number:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="tel" id="number" name="cardnumber">
+            </p>
+            <p>
+                <label for="date">
+                    <span>Expiration date:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                    <em>formatted as mm/dd/yyyy</em>
+                </label>
+                <input type="date" id="date" name="expiration">
+            </p>
+            <p>
+                <!-- <a href="#ex1" rel="modal:open"><button type="submit">Validate the payment</button></a> -->
+                <button type="submit">Validate the payment</button>
+            </p>
+        </section>
+    </form>
+
+    <div id="ex1" class="modal">
+        <p></p>
+        <a href="#" rel="modal:close"><button>Close</button></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="scripts/formhandler.js" charset='utf-8'></script>
+    <script src="scripts/payment.js" charset='utf-8'></script>
+</body>
+</html>
